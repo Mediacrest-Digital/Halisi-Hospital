@@ -1,0 +1,86 @@
+{% load static %}
+<footer class="bg-halisi-blue">
+    <div class="container py-2 text-light">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-12 pt-2">
+                <img src="{% static 'website/images/footer_logo.png' %}" class="img-fluid py-5" />
+                
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/HalisiFamilyHospital" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a> 
+                    <a href="https://twitter.com/HalisiFamily" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/halisi-family-hospital/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.instagram.com/halisifamilyhospital/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+                </div>
+            
+            </div>
+            <div class="col-lg-3 col-md-3 col-6 pt-3">
+                <h6 class="fw-bold">Quick Links</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link text-light" href="{% url 'website:about' %}">~ About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{% url 'website:services' %}">~ Our Services</a>
+                      </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-light" href="{% url 'website:careers' %}">~ Careers</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-light" href="{% url 'website:gallery' %}">~ Gallery</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-6 pt-3">
+                <h6 class="fw-bold">Visiting Hours</h6>
+                <div class="ps-2">
+                    <p class="">6:00AM - 7:30AM</p>
+                    <p class="pt-2">11:30AM - 1:30PM</p>
+                    <p class="pt-2">6:00PM - 8:00PM</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-12 pt-3">
+                <h6 class="fw-bold">Contacts</h6>
+                <div>
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="bi bi-telephone-inbound-fill pt-5"></i>
+                        </div>
+                        <div class="col-10">
+                            <p>+254 735 425 474</p>
+                            <p>+254 748 866 586</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div class="col-10">
+                            <p>hallo@halisifamily.hospital</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <div class="col-10">
+                            <p>Nairobi - Namanga Road <br />
+                                Past Total Kitengela, Yukos
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-3 pb-2">
+            <div class="col-12">
+                <p class="text-center">Copyright &copy; 2023 | <strong>HALISI FAMILY HOSPITAL</strong> | All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</footer>

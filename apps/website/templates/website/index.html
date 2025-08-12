@@ -1,0 +1,222 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %} Halisi Family Hospital {% endblock %}
+
+{% block content %} 
+
+    {% include 'website/main_header.html' %}
+
+
+    <section>
+        
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'website/images/slides/slide1.png' %}" class="d-block w-100" alt="">
+              </div>
+              <!-- <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div> -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+ 
+    <section>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5 col-md-5 col-12">
+                    <div class="home-about-img">
+                        <img src="{% static 'website/images/main/about_3.jpg' %}" class="img-fluid d-block mx-auto" style="border-radius: 60px 0 60px 0;" />
+                
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1 col-md-5 offset-md-1 col-12">
+                    <span>Who We Are <i class="bi bi-info-circle-fill text-halisi"></i></span>
+                    <h2 class="text-halisi fw-bold">Halisi Family Hospital</h2>
+                    <p class="lh-lg">
+                        Halisi Family Hospital is a private healthcare organization located in Kitengela, Kajiado County. 'Halisi' is a Swahili word that means being <strong class="text-halisi">truthful, authentic, genuine and real.</strong> Our culture focuses on providing health and wellness services to families in a manner that reflects being 'Halisi'.
+                    </p>
+                    
+                    <div class="row pt-2">
+                        <div class="col-6">
+                            <p><img src="{% static 'website/images/icons/diversity.png' %}" class="img-fluid" /> Integrity</p>
+                        </div>
+                        <div class="col-6">
+                            <p><img src="{% static 'website/images/icons/trust.png' %}" class="img-fluid" /> Truth, Honesty and Trust</p>
+                        </div>
+                        <div class="col-6">
+                            <p><img src="{% static 'website/images/icons/excellence.png' %}" class="img-fluid" /> Excellence</p>
+                        </div>
+                        <div class="col-6">
+                            <p><img src="{% static 'website/images/icons/honesty.png' %}" class="img-fluid" /> Respect</p>
+                        </div>
+                    </div>
+                    <a href="{% url 'website:about' %}" class="btn btn-outline-halisi rounded-pill py-2 px-3 mt-3">Learn More <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-light-blue">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-6">
+                    <h2 class="text-halisi" style="width: 60%;">Our Services</h2>
+                </div>
+                <div class="col-lg-5 col-md-5 col-6">
+                    <p class="">At Halisi Family Hospital, we are a Family serving Families.</p>
+                    <a href="{% url 'website:services' %}">Find All Services <i class="ps-2 bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="row py-5">
+                {% for service in homeservices %}
+                <div class="col-lg-3 col-md-3 col-6">
+                    <div class="card border-0 shadow-sm h-100 service-card">
+                        <img src="{{service.image.url}}" class="img-fluid" />
+                        <div class="card-body">
+                            <h5 class="text-halisi">{{service.name}}</h5>
+                            <a href="{% url 'website:service' service.id %}"><i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <div class="text">
+                                <h5 class="pt-3 text-center text-light">{{service.name}}</h5>
+                                <p class="py-3 px-3 text-light text-center">{{service.excerpt}}</p>
+                                <div class="text-center">
+                                    <a href="{% url 'website:service' service.id %}" class="btn btn-light">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-halisi-blue">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-6 pt-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body beds">
+                            <h3 class="text-halisi">20+</h3>
+                            <h6 class="text-dark">Beds Capacity</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6 pt-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body practitioners">
+                            <h3 class="text-halisi">30+</h3>
+                            <h6 class="text-dark">Practitioners</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6 pt-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body patients">
+                            <h3 class="text-halisi">13,000+</h3>
+                            <h6 class="text-dark">Happy Patients</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6 pt-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body insurance">
+                            <h3 class="text-halisi">20+</h3>
+                            <h6 class="text-dark">Insurance Partners</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="home-clinics">
+        <div class="container py-4">
+            <h2 class="text-center text-halisi fw-bold">Our Clinics</h2>
+            <div class="row clinics-list">
+                {% for day in days %}
+                    <div class="col-lg-4 col-md-4 col-12 mt-3">
+                        <div class="card h-100 border-top-0 border-start-0 border-bottom-0 mx-2 clinic-card">
+                            <img src="{{day.image.url}}" class="img-fluid" />
+                        </div>
+                    </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container py-5">
+            <h2 class="text-halisi text-center">Our Insurance Partners</h2>
+            <div class="row">
+                {% for partner in partners %}
+                    <div class="col-lg-2 col-md-3 col-6 pt-3">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <img src="{{partner.logo.url}}" class="img-fluid d-block mx-auto" />
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-light-blue">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5 col-md-5 col-12">
+                    <h4 class="text-halisi">Patients' testimonials</h4>
+                </div>
+                <div class="col-lg-7 col-md-7 col-12">
+                    <h2 class="text-halisi text-end">13,000+</h2>
+                    <h6 class="text-end">Satistied Patients</h6>
+                </div>
+            </div>
+            <div class="row testimonials-list">
+                {% for testimony in testimonials %}
+                    <div class="col-lg-4 col-md-4 col-12 pt-3 mx-5">
+                        <div class="card border-0 mx-2 shadow-sm">
+                            <img src="{{testimony.image.url}}" class="img-fluid" />
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+
+
+    {% include 'website/main_footer.html' %}
+
+
+
+    
+
+{% endblock %}

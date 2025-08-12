@@ -1,0 +1,47 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %} Halisi Family Hospital {% endblock %}
+
+{% block content %} 
+
+    {% include 'website/main_header.html' %}
+
+    <section>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-12">
+                    {% if careers|length <= 0 %}
+                        <h5 class="text-halisi pt-5">Currently, we don’t have any open positions available.</h5>
+                        <p class="lh-lg">We encourage you to check back on this page periodically, as we update our job openings regularly. In the meantime, we welcome you to learn more about our company, our culture, and our values.</p>
+                    {% else %}
+                        {% for career in careers %}
+                            {% if career.status == "Active" %}
+                                <div class="card border-0 shadow-sm mt-2">
+                                    <div class="card-body">
+                                        <a href="{% url 'website:career' career.id %}">
+                                            <h2 class="text-halisi">{{ career.name}}</h2>
+                                            <span>{{career.date_created}}</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="col-lg-4 col-md-4 col-12">
+                    <ul class="list-group">
+                        <li class="list-group-item bg-halisi-blue" aria-current="true">Our Services</li>
+                        {% for service in services %}
+                            <li class="list-group-item text-halisi"><a href="{% url 'website:service' service.id %}"><i class="bi bi-chevron-right"></i> {{service.name}}</a></li>
+                        {% endfor %}
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    {% include 'website/main_footer.html' %}
+{% endblock %}

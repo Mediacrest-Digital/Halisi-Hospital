@@ -1,0 +1,379 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %} Halisi Family Hospital {% endblock %}
+
+{% block content %} 
+
+    {% include 'website/main_header.html' %}
+
+
+    <section>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'website/images/slides/1.png' %}" class="d-block w-100" alt="">
+                <!--<div class="carousel-caption">-->
+                <!--    <h1>Quality Healthcare You Can Trust</h1>-->
+                <!--</div>-->
+              </div>
+              <!-- <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div> -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
+    
+    <!-- <section class="bg-light">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h1 class="home-tag">Our Family <br /> <span class="highlight-blue animate__animated animate__bounce animate__delay-2s">Caring</span> For Yours</h1>
+                    <p class="lh-lg pt-3">Our mission is to provide high quality healthcare that is client-centered, compassionate, comprehensive, easily accessible and provides good value for money and time.</p>
+                    
+                    <div class="home-action-btns pt-3">
+                        <button class="btn btn-outline-halisi rounded-pill py-2 px-3">Learn More <i class="bi bi-arrow-right"></i></button>
+                        <button class="btn btn-halisi rounded-pill py-2 px-3"><i class="bi bi-calendar-check-fill"></i> Book Appointment</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="home-main-img">
+                        <img src="{% static 'website/images/main/home.jpg' %}" class="img-fluid d-block mx-auto" style="border-radius: 0 60px 0 60px;" />
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+ 
+    <section>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5 col-md-5 col-12">
+                    <div class="home-about-img">
+                        <img src="{% static 'website/images/main/about_3.jpg' %}" class="img-fluid d-block mx-auto" style="border-radius: 60px 0 60px 0" />
+                        <!---->
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1 col-md-5 offset-md-1 col-12">
+                    <span>Who We Are <i class="bi bi-info-circle-fill ps-1 text-halisi"></i></span>
+                    <h2 class="text-halisi fw-bold home-abt">Halisi Family Hospital</h2>
+                    
+                    <p class="lh-lg">Halisi Family Hospital is a multi-specialty 25-bed inpatient and outpatient hospital in Kitengela, Kajiado County. Founded and managed by doctors, our purpose is to provide high quality healthcare with integrity and compassion to families in Kitengela and neighboring Kajiado, Machakos and Nairobi.</p>
+                    
+                    <div class="row pt-2">
+                        <div class="col-6">
+                            <p><img src="{% static 'website/images/icons/diversity.png' %}" class="img-fluid" /> Integrity</p>
+                        </div>
+                        <div class="col-6">
+                            <p><img src="{% static 'website/images/icons/trust.png' %}" class="img-fluid" /> Truth, Honesty and Trust</p>
+                        </div>
+                        <div class="col-6">
+                            <p><img src="{% static 'website/images/icons/excellence.png' %}" class="img-fluid" /> Excellence</p>
+                        </div>
+                        <div class="col-6">
+                            <p><img src="{% static 'website/images/icons/honesty.png' %}" class="img-fluid" /> Respect</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-halisi rounded-pill py-2 px-3 mt-3">Learn More <i class="bi bi-arrow-right"></i></button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <section class="bg-light-blue">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-6">
+                    <h2 class="text-halisi" style="width: 60%;">We Provide <span class="highlight-line">Quality</span> Services</h2>
+                </div>
+                <div class="col-lg-5 col-md-5 col-6">
+                    <p class="">At Halisi Family Hospital, we are a Family serving Families.</p>
+                    <a href="">Find All Services <i class="ps-2 bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="row py-5">
+                <div class="col-lg-3 col-md-3 col-6">
+                    <div class="card border-0 shadow-sm service-card">
+                        <img src="{% static 'website/images/services/outpatient.jpg' %}" />
+                        <div class="card-body">
+                            <h5 class="text-halisi">Outpatient</h5>
+                            <a href=""><i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <div class="card border-0 shadow-sm service-card">
+                        <img src="{% static 'website/images/services/inpatient.jpg' %}" class="" style="height: 175px" />
+                        <div class="card-body">
+                            <h5 class="text-halisi">Inpatient</h5>
+                            <a href=""><i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <div class="card border-0 shadow-sm service-card">
+                        <img src="{% static 'website/images/services/lab.jpeg' %}" class="" />
+                        <div class="card-body">
+                            <h5 class="text-halisi">Laboratory</h5>
+                            <a href=""><i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <div class="card border-0 shadow-sm service-card">
+                        <img src="{% static 'website/images/services/theatre3.jpeg' %}" class="" />
+                        <div class="card-body">
+                            <h5 class="text-halisi">Theatre Services</h5>
+                            <a href=""><i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="bg-halisi-blue">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-6 pt-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body beds">
+                            <h3 class="text-halisi">20+</h3>
+                            <h6 class="text-dark">Beds Capacity</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6 pt-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body practitioners">
+                            <h3 class="text-halisi">30+</h3>
+                            <h6 class="text-dark">Practitioners</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6 pt-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body patients">
+                            <h3 class="text-halisi">2000+</h3>
+                            <h6 class="text-dark">Happy Patients</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6 pt-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body insurance">
+                            <h3 class="text-halisi">10+</h3>
+                            <h6 class="text-dark">Insurance Partners</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="bg-clinic">
+        <div class="container py-5">
+            <h2 class="text-center text-halisi fw-bold">Our Clinics</h2>
+            
+            <div class="row pb-3">
+                <div class="col-lg-4 col-md-4 col-12 pt-2">
+                    <div class="card h-100 shadow-sm border-top-0 border-start-0 border-bottom-0 clinic-card">
+                        <div class="card-body clinic-card-body">
+                            <img src="{% static 'website/images/icons/baby.png' %}" style="width: 35%;" class="img-fluid" />
+                            <h6 class="text-halisi pt-3">Well Baby and Immunization Clinic</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 pt-2">
+                    <div class="card h-100 shadow-sm border-top-0 border-start-0 border-bottom-0 clinic-card">
+                        <div class="card-body clinic-card-body">
+                            <img src="{% static 'website/images/icons/ent.png' %}" style="width: 35%;" class="img-fluid" />
+                            <h6 class="text-halisi pt-3">ENT Clinic</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 pt-2">
+                    <div class="card h-100 shadow-sm border-top-0 border-start-0 border-bottom-0 clinic-card">
+                        <div class="card-body clinic-card-body">
+                            <img src="{% static 'website/images/icons/family.png' %}" style="width: 35%;" class="img-fluid" />
+                            <h6 class="text-halisi pt-3">Antenatal, Postnatal and Family Planning Clinic</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container py-5">
+            <h2 class="text-halisi text-center">Our Insurance Partners</h2>
+            
+            <div class="row">
+                <div class="col-lg-2 col-md-3 col-6 pt-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <img src="{% static 'website/images/partners/nhif.jpeg' %}" class="img-fluid d-block mx-auto" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 pt-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <img src="{% static 'website/images/partners/jubilee.png' %}" class="img-fluid d-block mx-auto" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 pt-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <img src="{% static 'website/images/partners/uap.jpeg' %}" class="img-fluid d-block mx-auto" style="width: 50%;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 pt-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <img src="{% static 'website/images/partners/old.png' %}" class="img-fluid d-block mx-auto" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 pt-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <img src="{% static 'website/images/partners/cic.webp' %}" class="img-fluid d-block mx-auto" style="width: 50%;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 pt-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <img src="{% static 'website/images/partners/uap.jpeg' %}" class="img-fluid d-block mx-auto" style="width: 50%;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 pt-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <img src="{% static 'website/images/partners/old.png' %}" class="img-fluid d-block mx-auto" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 pt-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <img src="{% static 'website/images/partners/uap.jpeg' %}" class="img-fluid d-block mx-auto" style="width: 50%;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 pt-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <img src="{% static 'website/images/partners/nhif.jpeg' %}" class="img-fluid d-block mx-auto" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 pt-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <img src="{% static 'website/images/partners/jubilee.png' %}" class="img-fluid d-block mx-auto" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-6 pt-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <img src="{% static 'website/images/partners/uap.jpeg' %}" class="img-fluid d-block mx-auto" style="width: 50%;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 pt-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <img src="{% static 'website/images/partners/cic.webp' %}" class="img-fluid d-block mx-auto" style="width: 50%;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-light-blue">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5 col-md-5 col-12">
+                    <h3 class="text-halisi">Patient testimonials</h3>
+                    
+                </div>
+                <div class="col-lg-7 col-md-7 col-12">
+                    <h2 class="text-halisi text-end">2000+</h2>
+                    <h6 class="text-end">Satistied Patients</h6>
+                </div>
+            </div>
+            <!--<p class="text-center">what our patients say.</p>-->
+            <div class="row testimonials-list">
+                    <div class="col-lg-4 col-md-4 col-12 pt-3 mx-5">
+                        <div class="card border-0 mx-2">
+                            <img src="{% static 'website/images/testimonials/t1.jpeg' %}" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 pt-3 mx-5">
+                        <div class="card border-0 mx-2">
+                            <img src="{% static 'website/images/testimonials/t2.jpeg' %}" />
+                           
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 pt-3 mx-5">
+                        <div class="card border-0 mx-2">
+                            <img src="{% static 'website/images/testimonials/t3.jpeg' %}" />
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 pt-3 mx-5">
+                        <div class="card border-0 mx-2">
+                            <img src="{% static 'website/images/testimonials/t4.jpeg' %}" />
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 pt-3 mx-5">
+                        <div class="card border-0 mx-2">
+                            <img src="{% static 'website/images/testimonials/t3.jpeg' %}" />
+                            
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+
+    {% include 'website/main_footer.html' %}
+
+
+
+    
+
+{% endblock %}

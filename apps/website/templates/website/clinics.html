@@ -1,0 +1,66 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %} Halisi Family Hospital {% endblock %}
+
+{% block content %} 
+
+    {% include 'website/main_header.html' %}
+
+    <section>
+        {% for day in days %}
+            {% if day.id|divisibleby:2 %}
+                <section>
+                    <div class="container py-5">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <h3 class="text-halisi">{{ day.day }}</h3>
+                                {% for clinic in clinics %}   
+                                    {% if clinic.allDay == day.day %}
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item"><i class="bi bi-check2"></i> {{clinic.name}}</li>
+                                        </ul>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <img src="{{ day.image.url }}"  class="img-fluid" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                
+            {% else %}
+                <section class="bg-light">
+                    <div class="container py-5">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <img src="{{ day.image.url }}"  class="img-fluid" />
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <h3 class="text-halisi">{{ day.day }}</h3>
+                                {% for clinic in clinics %}   
+                                    {% if clinic.allDay == day.day %}
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item"><i class="bi bi-check2"></i> {{clinic.name}}</li>
+                                        </ul>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            {% endif %}
+        {% endfor %}
+    </section>
+           
+    </section>
+
+    
+
+    {% include 'website/main_footer.html' %}
+{% endblock %}
+
+
+

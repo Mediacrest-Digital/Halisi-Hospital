@@ -1,0 +1,247 @@
+/*
+Halisi Family Hospital CSS
+July 20223
+
+Colors:
+    Blue: #1F70C0
+    Red: #E00613
+*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.bg-white{
+    background-color: #ffffff;
+}
+
+.highlight-blue{
+    background-color: #1F70C0;
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+.highlight-line{
+    position: relative;
+}
+
+.highlight-line::before{
+    /* content: "";
+    position: absolute;
+    left: 1px;
+    bottom: 4px;
+    width: 98%;
+    height: 13px;
+    background-color: #E00613;
+    z-index: -1; */
+}
+
+.bg-halisi-blue{
+    background-color: #1F70C0;
+    color: #ffffff;
+}
+
+.bg-light-blue{
+    background-color: rgb(233, 242, 251, 0.6);
+}
+
+.btn-halisi{
+    color: #ffffff;
+    background-color: #1F70C0;
+}
+
+.btn-halisi:hover{
+    border: 1px solid #1F70C0;
+    color: #1F70C0;
+    background-color: #ffffff;
+}
+
+.btn-outline-halisi{
+    border: 1px solid #1F70C0;
+    color: #1F70C0;
+    background-color: #ffffff;
+}
+
+.btn-outline-halisi:hover{
+    color: #ffffff;
+    background-color: #1F70C0;
+}
+
+.text-halisi{
+    color: #1F70C0;
+}
+
+.location-link{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.location-link:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.main-menu .navbar-nav .nav-item{
+    padding: 0 15px 0 15px;
+}
+
+.main-menu .navbar-nav .nav-item .active{
+    color: #1F70C0;
+}
+
+.home-tag{
+    font-size: 60px;
+}
+
+.home-main-img{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.home-main-img img{
+    z-index: 999999;
+}
+
+/* .home-main-img::before{
+    position: absolute;
+    left: -50px; top: -30px; right: 0; bottom: 0;
+    content: url("../images/icons/1.svg");
+    animation: pulse;
+    animation-duration: 2s;
+    --animate-repeat: 2;
+    z-index: 1;
+} */
+
+/* .home-main-img::after{
+    position: absolute;
+    right: -50px; bottom: -30px;
+    content: "";
+    background-color: #1F70C0;
+    border-radius: 50px;
+    height: 80px; width: 80px;
+    z-index: 1;
+} */
+
+.home-about-img{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.clinic-card{
+    border-right: 3px solid #1F70C0;
+    transition: border-right 0.2s;
+    overflow: hidden;
+}
+
+.clinic-card:hover{
+    border-right: 8px solid #1F70C0;
+}
+
+.clinic-card-body::after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: -8%;
+    bottom: -10%;
+    width: 50%;
+    height: 50%;
+    background-image: url("../images//icons/clinic.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    opacity: 0.2;
+}
+
+.beds::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%; right: 5%;
+    width: 70%; height: 70%;
+    background-image: url("../images/icons/hospital-bed.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    opacity: 0.5;
+}
+
+.patients::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%; right: 5%;
+    width: 70%; height: 70%;
+    background-image: url("../images/icons/patient.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    opacity: 0.5;
+}
+
+
+.practitioners::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%; right: 5%;
+    width: 70%; height: 70%;
+    background-image: url("../images/icons/medical-team.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    opacity: 0.5;
+}
+
+
+.insurance::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%; right: 5%;
+    width: 70%; height: 70%;
+    background-image: url("../images/icons/healthcare.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    opacity: 0.5;
+}
+
+/* .home-about-img::before{
+    position: absolute;
+    left: -50px; bottom: -50px;
+    content: url("../images/icons/1.svg");
+    animation: pulse;
+    animation-duration: 2s;
+    --animate-repeat: 2;
+    z-index: 1;
+} */
+
+/* .home-about-img::after{
+    position: absolute;
+    right: -50px; top: -50px;
+    content: url("../images/icons/1.svg");
+    
+    z-index: 1;
+} */
+
+
+.footer-socials a{
+    color: #ffffff;
+}
+
+
+.footer-socials a i{
+    padding: 0 8px;
+    font-size: 26px;
+}
+
+
+
+
+

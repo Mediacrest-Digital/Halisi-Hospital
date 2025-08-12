@@ -1,0 +1,132 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %} About Us - Halisi Family Hospital {% endblock %}
+
+{% block content %}
+
+    {% include 'website/main_header.html' %}
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <img src="{% static 'website/images/main/halisi_about.jpeg' %}" class="img-fluid" />
+                </div>
+                <div class="col-lg-5 col-md-5 col-12">
+                    <h4 class="text-halisi pt-3"><i class="bi bi-info-circle-fill text-halisi"></i> Who We Are</h4>
+                    <p class="lh-lg">Halisi Family Hospital is a private healthcare organization located in Kitengela, Kajiado County. 
+                        'Halisi' is a Swahili word that means being truthful, authentic, genuine and real. Our culture focuses
+                        on providing health and wellness services to families in a manner that reflects being 'Halisi'.
+                    </p>
+
+                    <h6 class="text-halisi pt-2">Our Promise</h6>
+                    <p>Quality healthcare you can trust.</p>
+
+                    <h6 class="text-halisi pt-2">Our Family</h6>
+                    <p>At Halisi Family Hospital, we are a Family serving Families.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-light">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="card border-0 shadow mx-5 animate__animated animate__pulse animate__slow animate__infinite">
+                        <div class="card-body">
+                            <h4><i class="bi bi-bullseye text-halisi"></i> Our <span class="text-halisi">Mission</span></h4>
+                            <p class="lh-lg">To care for families by providing health and wellness services with
+                                excellence, honesty and kindness.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow mt-5 mx-5 animate__animated animate__headShake animate__slow animate__infinite">
+                        <div class="card-body">
+                            <h4><i class="bi bi-eye-fill text-halisi"></i> Our <span class="text-halisi">Vision</span></h4>
+                            <p class="lh-lg">
+                                A home for health and wellness
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <img src="{% static 'website/images/main/about_mission.jpg' %}" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <img src="{% static 'website/images/main/about_values.jpg' %}" class="img-fluid" style="border-radius: 120px 0 70px 0;" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h4><i class="bi bi-stars text-halisi"></i> Our <span class="text-halisi">Values</span></h4>
+                    <div class="ps-3">
+                        <div class="row g-0">
+                            <div class="col-3">
+                                <i class="bi bi-check2"></i> <span class="text-halisi">Family -</span>
+                            </div>
+                            <div class="col-9">
+                                <p>Everyone is family</p>
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-3">
+                                <i class="bi bi-check2"></i> <span class="text-halisi">Kindness</span> - 
+                            </div>
+                            <div class="col-9">
+                                <p>We genuinely care for our family and go out of our way to serve them</p>
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-3">
+                                <i class="bi bi-check2"></i> <span class="text-halisi">Honesty</span> - 
+                            </div>
+                            <div class="col-9">
+                                <p>We are open and honest in all our interactions to foster trust</p>
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-3">
+                                <i class="bi bi-check2"></i> <span class="text-halisi">Integrity</span> - 
+                            </div>
+                            <div class="col-9">
+                                <p>We do the right thing, in the right way,at the right time and for the right reasons</p>
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-3">
+                                <i class="bi bi-check2"></i> <span class="text-halisi">Respect</span> - 
+                            </div>
+                            <div class="col-9">
+                                <p>We value our family's opinion, preferences, privacy, time and money.</p>
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-3">
+                                <i class="bi bi-check2"></i> <span class="text-halisi">Excellence</span> - 
+                            </div>
+                            <div class="col-9">
+                                <p>We work hard to continuously improve our knowledge, skills, systems and processes to better meet the needs of our family.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {% include 'website/main_footer.html' %}
+
+{% endblock %}
+

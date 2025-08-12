@@ -1,0 +1,41 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %} Halisi Family Hospital {% endblock %}
+
+{% block content %} 
+
+    {% include 'website/main_header.html' %}
+
+    <section>
+        <div class="container py-4">
+            <div class="row">
+                {% for service in services %}
+                    <div class="col-lg-4 col-md-4 col-12 mt-4">
+                        <div class="card border-0 shadow-sm h-100 service-card">
+                            <img src="{{service.image.url}}" class="img-fluid" />
+                            <div class="card-body">
+                                <h6 class="text-halisi">{{service.name}}</h6>
+                            </div>
+                            <div class="overlay">
+                                <div class="text">
+                                    <h5 class="pt-5 text-center text-light">{{service.name}}</h5>
+                                    <p class="py-4 px-3 text-light text-center">{{service.excerpt}}</p>
+                                    <div class="text-center">
+                                        <a href="{% url 'website:service' service.id %}" class="btn btn-light">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+   
+
+    {% include 'website/main_footer.html' %}
+{% endblock %}
+
+
+
